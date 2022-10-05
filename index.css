@@ -1,0 +1,104 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    background-color: violet;
+}
+h1{
+    font: oblique bold 120% cursive;
+    font-size: x-large;;
+}
+/* Bernard Bernoulli: Animación del personaje */
+#bern {
+    /* Tamaño de la viñeta individual */
+    width:112px;
+    height:156px;
+    /* Cómo hay establecido un tamaño, centramos con margin:auto */
+    margin:auto;  
+    /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+    background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/bernard-sprite.png) repeat-x;
+    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+    animation:walk .8s steps(6) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+    position:relative;
+    bottom:34px;
+  }
+  
+  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
+  @keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-672px }
+  }
+  #buscador{
+    font: oblique bold 120% cursive;
+    font-size: x-large;;
+  }
+article{
+    display: flex;
+    height: 80%;
+    padding-top: 10px;
+}
+#contenedor_mapa{
+    width: 50vw;
+}
+#ruta{
+    width: 50vw;
+}
+#mapa {
+    width: 50vw;
+    height: 60vh;
+    background-color:violet;
+}
+
+
+.contenedor {
+    display: grid;
+    width: 100%;
+    font-size: x-large;
+    grid-template-columns: repeat(3,3fr) 2fr ;
+    grid-template-rows: fit-content(90%);
+    background-color:violet;
+    
+}
+  /*este es para que no se salga en modo movil */
+  .contenedor>div{
+    overflow: hidden;
+  }
+
+  .elemento {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font: oblique bold 120% cursive;
+    font-size: x-large;;
+    line-height: 30px;
+    text-align: center;
+    height: 60px;
+  }
+
+#dibujo {
+    background-color: rgb(65, 4, 4);
+    color: white;
+}  
+/* esta es para organizar el tamaño en modo movil */
+@media (max-width: 600px) {
+    article{
+        flex-direction:column;
+    }
+    #contenedor_mapa {
+        width:95vw;
+    }
+    #ruta {
+        width:95vw;
+    }
+    #mapa {
+        width:95vw;
+    }
+    .contenedor {
+        width: 80;
+    }
+}
+ 
