@@ -73,7 +73,7 @@ article{
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 5px;
     font: oblique bold 120% cursive;
-    font-size: x-large;;
+    font-size: x-large;
     line-height: 30px;
     text-align: center;
     height: 60px;
@@ -83,6 +83,12 @@ article{
     background-color: rgb(65, 4, 4);
     color: white;
 }  
+h2 {
+    font: oblique bold 120% cursive;
+    font-size: x-large;
+    text-align: center;
+    color: violet;
+}
 /* esta es para organizar el tamaño en modo movil */
 @media (max-width: 600px) {
     article{
