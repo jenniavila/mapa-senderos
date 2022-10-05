@@ -91,6 +91,12 @@ h2 {
 }
 /* esta es para organizar el tamaño en modo movil */
 @media (max-width: 600px) {
+    h1{
+        font-size:smaller;
+    }
+    #buscador{
+        font-size:smaller;
+    }
     article{
         flex-direction:column;
     }
@@ -105,6 +111,10 @@ h2 {
     }
     .contenedor {
         width: 80;
+        font-size:smaller;
+    }
+    .elemento{
+        font-size:smaller;
     }
 }
  
